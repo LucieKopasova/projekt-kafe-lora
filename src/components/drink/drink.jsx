@@ -1,16 +1,18 @@
 import { Layer } from '../layer/layer.jsx';
 import './drink.css';
 
-export const Drink = ({ name, image }) => {
+export const Drink = ({ name, image, layers }) => {
   return (
     <div className="drink">
       <div className="drink__product">
         <div className="drink__cup">
-          <img src={image} />
+          <img src={`http://localhost:4000${image}`} />
         </div>
         <div className="drink__info">
           <h3>{name}</h3>
-          <Layer color="#feeeca" label="mléčná pěna" />
+          {layers.map((layer) => (
+            <Layer color={layer.color} label={layer.label} />
+          ))}
         </div>
       </div>
       <form className="drink__controls">

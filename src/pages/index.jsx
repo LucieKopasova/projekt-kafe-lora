@@ -8,6 +8,11 @@ import { Contact } from '../components/contact/contact.jsx';
 import { Gallery } from '../components/gallery/gallery.jsx';
 import { Header } from '../components/header/header.jsx';
 
+const response = await fetch('http://localhost:4000/api/drinks');
+const data = await response.json();
+const drinks = data.data;
+console.log(drinks);
+
 document.querySelector('#root').innerHTML = render(
   <div className="page">
     <Header />
@@ -15,7 +20,7 @@ document.querySelector('#root').innerHTML = render(
     <main>
       <Banner />
 
-      <Menu />
+      <Menu drinks={drinks} />
 
       <Gallery />
 
