@@ -37,3 +37,21 @@ document.querySelector('.nav-btn').addEventListener('click', () => {
 document.querySelector('.rollout-nav').addEventListener('click', () => {
   document.querySelector('.rollout-nav').classList.add('nav-closed');
 });
+
+document.querySelectorAll('form').forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const dataId = form.dataset.id;
+    console.log(dataId);
+
+    fetch(`http://localhost:4000/api/drinks/${dataId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify([{ op: 'replace', path: '/ordered', value: true }]),
+    }).finally(() => {
+      window.location.reload();
+    });
+  });
+});
