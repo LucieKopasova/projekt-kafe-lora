@@ -1,5 +1,6 @@
-/* Header */
-header {
+ /* Header */
+ /*
+ header {
   padding: 1rem 0 1rem 0;
   height: 5rem;
   background-color: #301a1a;
@@ -62,7 +63,7 @@ nav a:hover {
   background-image: url("./img/menu.png");
   background-size: contain;
   cursor: pointer;
-}
+} 
 
 @media (min-width: 768px) {
   .navigation {
@@ -96,11 +97,11 @@ nav a:hover {
     margin-left: 65%;
     padding-top: 4rem;
     text-align: center;
-  }  
-}
+  }
+} */
 
-/* Footer */
-footer {
+ /* Footer */
+ /* footer {
   padding: 2rem 0;
   background-color: #301a1a;
 }
@@ -110,10 +111,10 @@ footer {
   margin: 0 auto;
   font-size: small;
   text-align: center;
-}
+} */
 
-/* Banner */
-.banner {
+ /* Banner */
+ /* .banner {
   padding-top: 0;
   background-image: url("./img/beans.jpg");
   background-size: cover;
@@ -142,10 +143,10 @@ footer {
     padding-top: 4rem;
     text-align: center;
   }
-}
+} */
 
-/* Menu */
-.menu-intro {
+ /* Menu */
+ /* .menu-intro {
   max-width: 20rem;
   margin: 0 auto 0 auto;
   text-align: center;
@@ -153,7 +154,7 @@ footer {
 
 .drinks-list {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   justify-content: center;
   justify-items: center;
   grid-gap: 1rem;
@@ -169,8 +170,9 @@ footer {
   border-radius: 5px;
   box-shadow: 0 0 3px #444;
 }
-
-/* Menu - Drink */
+ */
+ /* Menu - Drink */
+ /*
 .drink {
   width: 20rem;
 }
@@ -224,10 +226,10 @@ footer {
 
 .order-btn:active {
   background-color: #e67e51;
-}
+} */
 
-/* Drink - Layer */
-.layer {
+ /* Drink - Layer */
+ /* .layer {
   display: flex;
   padding: 0.25rem;
 }
@@ -244,9 +246,10 @@ footer {
 .layer__label {
   height: 1rem;
   line-height: 1rem;
-}
+} */
 
-/* Gallery */
+ /* Gallery */
+ /*
 .gallery {
   min-height: 100vh;
   color: white;
@@ -280,10 +283,10 @@ footer {
     flex-direction: row;
     gap: 2rem;
   }
-}
+} */
 
-/* Contact */
-.contact {
+ /* Contact */
+ /* .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -307,3 +310,4 @@ footer {
   width: 100%;
   height: auto;
 }
+ */
