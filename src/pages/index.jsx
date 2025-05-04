@@ -44,12 +44,21 @@ document.querySelectorAll('form').forEach((form) => {
     const dataId = form.dataset.id;
     console.log(dataId);
 
+    const controlOrder = drinks.find(
+      (napoj) => napoj.id === Number(dataId),
+    )?.ordered;
+    const valueOrder = !controlOrder ? true : false;
+
+    console.log(controlOrder);
+
     fetch(`http://localhost:4000/api/drinks/${dataId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify([{ op: 'replace', path: '/ordered', value: true }]),
+      body: JSON.stringify([
+        { op: 'replace', path: '/ordered', value: valueOrder },
+      ]),
     }).finally(() => {
       window.location.reload();
     });
