@@ -1,7 +1,7 @@
 import './header.css';
 
-export const Header = () => {
-  return (
+export const Header = ({ showMenu }) => {
+  return showMenu ? (
     <header>
       <div id="home" className="header__content container">
         <div className="site-logo"></div>
@@ -15,6 +15,16 @@ export const Header = () => {
             <a href="#contact">kontakt</a>
           </nav>
         </div>
+      </div>
+    </header>
+  ) : (
+    <header>
+      <div className="container header__content">
+        <div className="site-logo"></div>
+
+        <nav className="inline-nav">
+          <a href="/">Hlavní stránka</a>
+        </nav>
       </div>
     </header>
   );
